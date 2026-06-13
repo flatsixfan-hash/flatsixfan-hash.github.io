@@ -139,28 +139,6 @@
     .pf-card:hover .pf-arrow { background: var(--blue); border-color: var(--blue); transform: rotate(0deg); }
     .pf-arrow svg { width: 13px; height: 13px; stroke: var(--ice); }
 
-    /* Products */
-    #products {}
-    .products-header { margin-bottom: 4rem; }
-    .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .product-card { background: var(--navy2); border: 1px solid var(--border); border-radius: 2px; padding: 2.8rem; position: relative; overflow: hidden; transition: background .3s; }
-    .product-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 0% 100%, rgba(74,158,232,.08) 0%, transparent 60%); opacity: 0; transition: opacity .4s; }
-    .product-card:hover { background: rgba(74,158,232,.04); }
-    .product-card:hover::before { opacity: 1; }
-    .product-icon-wrap { width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.6rem; background: linear-gradient(135deg, var(--blue-dk) 0%, var(--blue) 100%); }
-    .product-icon-wrap svg { width: 28px; height: 28px; }
-    .product-tag { font-size: .65rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--blue); margin-bottom: .6rem; }
-    .product-name { font-family: 'Rajdhani', sans-serif; font-size: 2rem; font-weight: 700; color: var(--ice); margin-bottom: .9rem; letter-spacing: .01em; line-height: 1.1; }
-    .product-desc { font-size: .9rem; color: var(--muted); line-height: 1.75; margin-bottom: 1.6rem; }
-    .product-meta { font-size: .72rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1.8rem; display: flex; align-items: center; gap: .5rem; }
-    .product-meta::before { content: ''; display: block; width: 16px; height: 1px; background: var(--muted); }
-    .product-developer { font-size: .78rem; color: var(--muted); letter-spacing: .04em; border-top: 1px solid var(--border); padding-top: 1.4rem; margin-top: auto; }
-    .product-developer strong { color: var(--blue-lt); font-weight: 600; }
-    .product-store-link { display: inline-flex; align-items: center; gap: .5rem; font-family: 'Rajdhani', sans-serif; font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); text-decoration: none; transition: color .25s; }
-    .product-store-link:hover { color: var(--blue-lt); }
-    .product-store-link svg { transition: transform .2s; }
-    .product-store-link:hover svg { transform: translateX(3px); }
-
     /* Contact */
     #contact { background: var(--navy2); position: relative; overflow: hidden; }
     #contact::before { content: ''; position: absolute; top: -50%; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(74,158,232,.05) 0%, transparent 65%); pointer-events: none; }
@@ -208,7 +186,6 @@
       .portfolio-grid { grid-template-columns: 1fr; }
       .pf-card:first-child, .pf-card:nth-child(4) { grid-column: span 1; }
       .pf-card:first-child .pf-inner, .pf-card:nth-child(4) .pf-inner { aspect-ratio: 16/9; }
-      .products-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
       .form-row { grid-template-columns: 1fr; }
       nav { padding: 1rem 1.5rem; }
@@ -239,7 +216,7 @@
   <meta name="twitter:description" content="Fast, beautiful, high-performance websites built to grow your business." />
   <!-- Schema.org -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Five Suns Digital LLC","url":"https://fivesunsdigital.com","email":"Sales@fivesunsdigital.com","description":"Five Suns Digital designs and engineers fast, beautiful websites.","owns":[{"@type":"SoftwareApplication","name":"The Appraisal Room","applicationCategory":"MobileApplication","operatingSystem":"iOS","url":"https://fivesunsdigital.com/#products","author":{"@type":"Organization","name":"Five Suns Digital LLC","url":"https://fivesunsdigital.com"}},{"@type":"SoftwareApplication","name":"ThriftIQ","applicationCategory":"MobileApplication","operatingSystem":"iOS","url":"https://fivesunsdigital.com/#products","author":{"@type":"Organization","name":"Five Suns Digital LLC","url":"https://fivesunsdigital.com"}}]}
+  {"@context":"https://schema.org","@type":"Organization","name":"Five Suns Digital LLC","url":"https://fivesunsdigital.com","email":"Sales@fivesunsdigital.com","description":"Five Suns Digital designs and engineers fast, beautiful websites."}
   </script>
 </head>
 <body>
@@ -253,7 +230,6 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
-    <li><a href="#products">Products</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Start a Project</a>
@@ -407,8 +383,9 @@
           <div class="pf-pattern" style="position:absolute;inset:0;"></div>
         </div>
         <div class="pf-info">
-          <p class="pf-tag">Mobile App · Design & Development</p>
+          <p class="pf-tag">Android App · Design &amp; Development</p>
           <p class="pf-title">The Appraisal Room — Property Valuation App</p>
+          <p class="pf-availability"><a href="https://play.google.com/store/apps/details?id=com.fivesunsdigital.appraisalroom" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;font-size:.75rem;opacity:.8;">Available on Google Play</a></p>
         </div>
         <div class="pf-arrow"><svg viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2v7" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
       </div>
@@ -466,56 +443,6 @@
   </div>
 </section>
 
-<!-- ─── Products ────────────────────────────────────────────────────────── -->
-<section id="products">
-  <div class="products-header">
-    <p class="section-tag reveal">Our Products</p>
-    <h2 class="section-h2 reveal reveal-delay-1">Apps Built by<br>Five Suns Digital</h2>
-  </div>
-  <div class="products-grid">
-
-    <!-- The Appraisal Room -->
-    <div class="product-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
-      <div class="product-icon-wrap" aria-hidden="true">
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="2" width="20" height="24" rx="2" stroke="#E8F4FF" stroke-width="1.4"/>
-          <path d="M9 9h10M9 13h10M9 17h6" stroke="#E8F4FF" stroke-width="1.4" stroke-linecap="round"/>
-          <circle cx="21" cy="21" r="5" fill="#4A9EE8"/>
-          <path d="M19 21l1.5 1.5L23 19.5" stroke="#060E1F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <p class="product-tag">iOS App</p>
-      <h3 class="product-name" itemprop="name">The Appraisal Room</h3>
-      <p class="product-desc" itemprop="description">A smart appraisal companion that helps users research, document, and value items with confidence — designed for collectors, estate sellers, and everyday finds.</p>
-      <p class="product-meta">Available on the App Store</p>
-      <p class="product-developer">Developed by <strong itemprop="author">Five Suns Digital LLC</strong> &nbsp;·&nbsp; <a href="https://fivesunsdigital.com/#support" style="color:var(--muted);text-decoration:none;" itemprop="url">fivesunsdigital.com</a></p>
-      <meta itemprop="applicationCategory" content="MobileApplication"/>
-      <meta itemprop="operatingSystem" content="iOS"/>
-    </div>
-
-    <!-- ThriftIQ -->
-    <div class="product-card reveal reveal-delay-1" itemscope itemtype="https://schema.org/SoftwareApplication">
-      <div class="product-icon-wrap" aria-hidden="true">
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 8h18l-2 12H7L5 8z" stroke="#E8F4FF" stroke-width="1.4" stroke-linejoin="round"/>
-          <path d="M5 8l-1-4H2" stroke="#E8F4FF" stroke-width="1.4" stroke-linecap="round"/>
-          <circle cx="10" cy="24" r="1.5" fill="#E8F4FF"/>
-          <circle cx="18" cy="24" r="1.5" fill="#E8F4FF"/>
-          <path d="M11 12.5l2 2 4-4" stroke="#4A9EE8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <p class="product-tag">iOS App</p>
-      <h3 class="product-name" itemprop="name">ThriftIQ</h3>
-      <p class="product-desc" itemprop="description">Your intelligent thrift-shopping sidekick. Scan, search, and instantly know whether that thrift-store find is worth the price — powered by real resale data.</p>
-      <p class="product-meta">Available on the App Store</p>
-      <p class="product-developer">Developed by <strong itemprop="author">Five Suns Digital LLC</strong> &nbsp;·&nbsp; <a href="https://fivesunsdigital.com/#support" style="color:var(--muted);text-decoration:none;" itemprop="url">fivesunsdigital.com</a></p>
-      <meta itemprop="applicationCategory" content="MobileApplication"/>
-      <meta itemprop="operatingSystem" content="iOS"/>
-    </div>
-
-  </div>
-</section>
-
 <section id="contact">
   <div class="contact-grid">
     <div class="contact-left">
@@ -566,7 +493,6 @@
   <div class="footer-links">
     <a href="#services">Services</a>
     <a href="#portfolio">Work</a>
-    <a href="#products">Products</a>
     <a href="#contact">Contact</a>
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="#" onclick="return false;" title="Terms of Service — coming soon">Terms</a>
